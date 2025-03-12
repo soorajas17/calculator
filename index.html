@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style> 
+		
+		h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+		.container{
+			width: 460px;
+			height: 540px;
+			background-color: rgb(23, 21, 21);
+			margin: auto;
+			padding: 10px;
+			border-radius: 10px;
+		}
+		#result{
+			background-color:rgb(96, 159, 170);
+			height: 80px;
+			width: 440px;
+			font-size: 4rem;
+			text-align: right;
+			border-radius: 10px;
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+		.button{
+			background-color: rgb(48, 47, 47);
+			color: white;
+			width: 92px;
+			height: 70px;
+			font-size: 2.5rem;
+			margin: 10px;
+			border-radius: 15px;
+
+		}
+		.clear{
+			background-color: grey;
+		}
+		.eval{
+			background-color: orangered;
+		}
+		.button:hover{
+			border: 5px solid white;
+		}
+		
+	</style> 
+</head>
+<body>
+	<h1>CALCULATOR</h1>
+
+    <div class="container">
+		<form>
+			<input type="text" id="result">
+			<br>
+			<input class="button clear" onclick="clearBox()" type="button" value="C">
+			<input class="button clear" onclick="removallastitem()"  type="button" value="&#9003">
+			<input class="button clear" onclick="displayNumber('%')" type="button" value="%">
+			<input class="button clear" onclick="displayNumber('/')" type="button" value="&#247">
+			<br>
+			<input class="button" onclick="displayNumber(7)" type="button" value="7">
+			<input class="button" onclick="displayNumber(8)" type="button" value="8">
+			<input class="button" onclick="displayNumber(9)" type="button" value="9">
+			<input class="button clear" onclick="displayNumber('*')" type="button" value="&#215">
+			<br>
+			<input class="button" onclick="displayNumber(4)" type="button" value="4">
+			<input class="button" onclick="displayNumber(5)" type="button" value="5">
+			<input class="button" onclick="displayNumber(6)" type="button" value="6">
+			<input class="button clear" onclick="displayNumber('-')" type="button" value="&#8722">
+			<br>
+			<input class="button" onclick="displayNumber(1)" type="button" value="1">
+			<input class="button" onclick="displayNumber(2)" type="button" value="2">
+			<input class="button" onclick="displayNumber(3)" type="button" value="3">
+			<input class="button clear" onclick="displayNumber('+')" type="button" value="&#43">
+			<br>
+			<input class="button" onclick="displayNumber('00')"  type="button" value="00">
+			<input class="button" onclick="displayNumber(0)"  type="button" value="0">
+			<input class="button" onclick="displayNumber('.')"  type="button" value=".">
+			<input class="button eval" onclick="evaluateExp()" type="button" value="&#61">
+		</form>
+    </div>
+</body>
+	<script src="./script.js"></script>
+</html>
